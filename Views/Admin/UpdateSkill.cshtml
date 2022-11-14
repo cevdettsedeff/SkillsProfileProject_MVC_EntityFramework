@@ -1,0 +1,21 @@
+﻿@model SkillsProfileProject_MVC_EntityFramework.Models.Classes.Skills
+
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:20px">
+        <label>Skill Information</label>
+        @Html.TextBoxFor(x => x.Information, new { @class = "form-control" })
+    </div>
+    <div style="margin-bottom:20px">
+        <label>Skill Value</label>
+        @Html.TextBoxFor(x => x.Value, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Update</button>
+    </div>
+</form>
+

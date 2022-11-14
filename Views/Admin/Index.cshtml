@@ -1,0 +1,27 @@
+﻿@using SkillsProfileProject_MVC_EntityFramework.Models.Classes;
+@model List<Skills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>SKILL</th>
+        <th>VALUE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+    </tr>
+    @foreach(var p in Model)
+    {
+    <tr>
+        <td>@p.Id</td>
+        <td>@p.Information</td>
+        <td>@p.Value</td>
+        <td><a class="btn btn-danger" href="/Admin/DeleteSkill/@p.Id">Delete</a></td>
+        <td><a class="btn btn-success" href="/Admin/UpdateSkill/@p.Id">Update</a></td>
+    </tr>
+    }
+</table>
+

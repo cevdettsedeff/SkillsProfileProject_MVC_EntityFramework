@@ -1,0 +1,77 @@
+﻿@using SkillsProfileProject_MVC_EntityFramework.Models.Classes
+@model List<Skills>
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic MVC Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Skills Profile Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    
+    <link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+    <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    
+    <script src="~/web/js/jquery-1.11.1.min.js"></script>
+    
+    <script src="~/web/js/easyResponsiveTabs.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	$(document).ready(function () {
+		$('#horizontalTab').easyResponsiveTabs({
+			type: 'default', //Types: default, vertical, accordion
+			width: 'auto', //auto or any width like 600px
+			fit: true   // 100% fit in a container
+		});
+	});
+    </script>
+    
+</head>
+<body>
+   
+    <div class="main">
+        <h1>Software Skills Cart</h1>
+        <div class="main-info w3l">
+            <div class="main-row">
+               
+                <div class="profile-grid logo wthree">
+                    <img src="~/web/images/ss.png" alt="">
+                    <h2>Cevdet Sedef </h2>
+                    <p>Software Developer</p>
+
+                </div>
+                <h3 class="title">Skills</h3>
+                <div class="col-md-6 skills-right bar_group">
+                    @foreach(var x in Model)
+                    {
+                    <div class='bar_group__bar thin' label='@x.Information &nbsp;&nbsp; @x.Value%' value='@x.Value'></div>
+                    }
+                </div>
+                
+                <script src="~/web/js/bars.js"></script>
+                <div class="social-icons agileits">
+                    <ul>
+                      @* <li><a href="#"></a></li>*@
+                      @* <li><a href="#" class="fb"></a></li>*@
+                        <li><a href="https://www.linkedin.com/in/cevdetsedef/" class="be" target="_blank"></a></li>
+                      @* <li><a href="#" class="gg"></a></li>*@
+                    </ul>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p> © 2022 Skills Profile Widget | Design by <a href="https://github.com/cevdettsedeff" target="_blank">CevdetSedef :)</a></p>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
